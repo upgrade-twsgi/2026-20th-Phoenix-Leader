@@ -3,16 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網頁跳轉中...</title>
-    
-    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-    
-    <script>
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    </script>
+    <title>測試網頁</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            overflow: hidden;
+        }
+        #message {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .show {
+            display: block !important;
+            opacity: 1 !important;
+        }
+    </style>
 </head>
 <body>
-    <p>正在將您導向新頁面...</p>
-    <p>如果您的瀏覽器沒有自動跳轉，請 <a href="https://您要跳轉的目標網址.com">點擊這裡手動前往</a>。</p>
+    <div id="message">感謝彰投支援圈夥伴的測試！！！</div>
+
+    <script>
+        // 隨機決定 (50% 機率)
+        if (Math.random() < 0.5) {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        } else {
+            const msg = document.getElementById('message');
+            msg.classList.add('show');
+        }
+    </script>
 </body>
 </html>
