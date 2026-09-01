@@ -36,16 +36,15 @@
     </style>
 </head>
 <body>
-    <div id="message">感謝彰投支援圈夥伴的測試！！<br>高中部感謝您&lt;3</div>
+    <div id="message">感謝彰投支援圈夥伴的測試！！<br>高中部愛你們呦&lt;3</div>
 
     <script>
-        // 隨機決定 (50% 機率)
-        if (Math.random() < 0.5) {
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-        } else {
-            const msg = document.getElementById('message');
+        // 直接顯示感謝文字
+        const msg = document.getElementById('message');
+        msg.style.display = 'block';
+        setTimeout(() => {
             msg.classList.add('show');
-        }
+        }, 50);
     </script>
 </body>
 </html>
